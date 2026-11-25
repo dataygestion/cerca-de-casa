@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1f7a4d" />
+  <meta name="description" content="Buscador de comercios y servicios del barrio." />
+  <title>Cerca de casa</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/icon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="cabecera">
+    <div class="contenedor">
+      <h1 id="nombre-barrio">Cerca de casa</h1>
+      <p id="lema" class="lema"></p>
+
+      <form class="buscador" role="search" onsubmit="return false">
+        <label for="q" class="sr-only">Buscar comercios y servicios</label>
+        <span class="lupa" aria-hidden="true">🔎</span>
+        <input id="q" type="search" placeholder="¿Qué buscás? Ej: pan, plomero"
+               autocomplete="off" enterkeyhint="search" />
+        <button id="borrar" type="button" class="borrar" aria-label="Borrar búsqueda" hidden>✕</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <nav id="accesos" class="accesos" aria-label="Accesos directos"></nav>
+    <div id="barra-categoria" class="barra-categoria" hidden>
+      <button id="volver" type="button" class="volver">← Volver</button>
+      <h2 id="titulo-categoria" class="titulo-categoria"></h2>
+    </div>
+
+    <p id="resumen" class="resumen" aria-live="polite"></p>
+    <section id="resultados" class="resultados"></section>
+
+    <section class="sumate">
+      <h2>¿Tenés un comercio o servicio?</h2>
+      <p>Sumalo gratis para que todos los vecinos te encuentren.</p>
+      <a id="btn-sumate" class="btn btn-wsp" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p id="pie-paseo"></p>
+    <p>Hecho por y para los vecinos 💚</p>
+  </footer>
+
+  <script src="data/datos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

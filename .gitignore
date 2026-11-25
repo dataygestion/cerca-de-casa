@@ -1,0 +1,4 @@
+# Archivos que Git no tiene que guardar
+.vscode/
+Thumbs.db
+desktop.ini
